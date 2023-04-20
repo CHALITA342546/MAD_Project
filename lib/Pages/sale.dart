@@ -4,7 +4,7 @@ class Sale extends StatefulWidget {
   const Sale({Key? key}) : super(key: key);
 
   @override
-  _SaleState createState() => _SaleState();
+  State<Sale> createState() => _SaleState();
 }
 
 class _SaleState extends State<Sale> {

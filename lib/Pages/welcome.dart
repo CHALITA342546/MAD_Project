@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:mutu/Pages/circle.dart';
-import 'package:mutu/Pages/square.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class Welcome extends StatefulWidget {
@@ -34,17 +32,17 @@ class _WelcomeState extends State<Welcome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xFF567189),
+        backgroundColor: const Color(0xFF567189),
         body: Padding(
           padding: const EdgeInsets.all(13.0),
           child: Center(
             child: Column(
               children: [
                 TextField(
-                    style: TextStyle(color: Color(0xFF567189)),
+                    style: const TextStyle(color: Color(0xFF567189)),
                     decoration: InputDecoration(
                             labelText: "Search",
-                            prefixIcon: Icon(Icons.search),
+                            prefixIcon: const Icon(Icons.search),
                             prefixIconColor: Theme.of(context).primaryColor)
                         .applyDefaults(Theme.of(context)
                             .inputDecorationTheme
@@ -63,7 +61,7 @@ class _WelcomeState extends State<Welcome> {
                     //   prefixIconColor: Color(0xFF7B8FA1),
                     // ),
                     ),
-                SizedBox(
+                const SizedBox(
                   height: 10.0,
                 ),
                 Row(
@@ -80,7 +78,7 @@ class _WelcomeState extends State<Welcome> {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(20.0),
                     child: Container(
-                      color: Color(0xFF7B8FA1),
+                      color: const Color(0xFF7B8FA1),
                       child: ListView.builder(
                         scrollDirection: Axis.horizontal,
                         itemCount: _category.length,
@@ -99,16 +97,16 @@ class _WelcomeState extends State<Welcome> {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(20.0),
                       child: Container(
-                        color: Color(0xFF7B8FA1),
+                        color: const Color(0xFF7B8FA1),
                         child: Column(
                           children: [
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                SizedBox(
+                                const SizedBox(
                                   width: 20,
                                 ),
                                 Text(
@@ -119,7 +117,7 @@ class _WelcomeState extends State<Welcome> {
                                 ),
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 5,
                             ),
                             CarouselSlider.builder(
@@ -137,22 +135,22 @@ class _WelcomeState extends State<Welcome> {
                                       CenterPageEnlargeStrategy.height,
                                   autoPlay: true,
                                   // reverse: true,
-                                  autoPlayInterval: Duration(seconds: 2),
+                                  autoPlayInterval: const Duration(seconds: 2),
                                   onPageChanged: (index, reason) =>
                                       setState(() => activeIndex = index),
                                 )),
-                            SizedBox(
+                            const SizedBox(
                               height: 22.0,
                             ),
                             buildIndicator(),
-                            SizedBox(
+                            const SizedBox(
                               height: 20.0,
                             ),
                           ],
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20.0,
                     ),
                     ClipRRect(
@@ -160,9 +158,9 @@ class _WelcomeState extends State<Welcome> {
                         child: Container(
                           height: 200,
                           width: 200,
-                          color: Color(0xFF7B8FA1),
+                          color: const Color(0xFF7B8FA1),
                         )),
-                    SizedBox(
+                    const SizedBox(
                       height: 20.0,
                     ),
                     ClipRRect(
@@ -170,7 +168,7 @@ class _WelcomeState extends State<Welcome> {
                         child: Container(
                           height: 200,
                           width: 200,
-                          color: Color(0xFF7B8FA1),
+                          color: const Color(0xFF7B8FA1),
                         ))
                   ]),
                 ),
@@ -181,8 +179,8 @@ class _WelcomeState extends State<Welcome> {
   }
 
   Widget buildImages(String image, int index) => Container(
-        margin: EdgeInsets.symmetric(horizontal: 5),
-        color: Color(0xFFCFB997),
+        margin: const EdgeInsets.symmetric(horizontal: 5),
+        color: const Color(0xFFCFB997),
         width: double.infinity,
         child: Image.network(
           image,
@@ -192,7 +190,7 @@ class _WelcomeState extends State<Welcome> {
   Widget buildIndicator() => AnimatedSmoothIndicator(
         activeIndex: activeIndex,
         count: images.length,
-        effect: SlideEffect(
+        effect: const SlideEffect(
           dotColor: Color(0xFFCFB997),
           activeDotColor: Color(0xFFFAD6A5),
           dotHeight: 10,

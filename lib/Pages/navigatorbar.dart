@@ -4,17 +4,16 @@ import 'package:mutu/Pages/userprofile.dart';
 import 'package:mutu/Pages/sale.dart';
 import 'package:mutu/Pages/welcome.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class Navigatorbar extends StatefulWidget {
   const Navigatorbar({Key? key}) : super(key: key);
 
   @override
-  _NavigatorbarState createState() => _NavigatorbarState();
+  State<Navigatorbar> createState() => _NavigatorbarState();
 }
 
 class _NavigatorbarState extends State<Navigatorbar> {
-  final screen = [Welcome(), Sale(), Chat(), Profile()];
+  final screen = [const Welcome(), const Sale(), const Chat(), const Profile()];
 
   final items = const [
     Icon(
@@ -44,7 +43,7 @@ class _NavigatorbarState extends State<Navigatorbar> {
         buttonBackgroundColor: Theme.of(context).primaryColor,
         items: items,
         index: index,
-        color: Color(0xFFCFB997),
+        color: const Color(0xFFCFB997),
         onTap: (selectIndex) {
           setState(() {
             index = selectIndex;

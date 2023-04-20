@@ -2,16 +2,13 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:mutu/Pages/navigatorbar.dart';
-import 'package:mutu/Pages/welcome.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 
 class VerifyEmail extends StatefulWidget {
   const VerifyEmail({Key? key}) : super(key: key);
 
   @override
-  _VerifyEmailState createState() => _VerifyEmailState();
+  State<VerifyEmail> createState() => _VerifyEmailState();
 }
 
 class _VerifyEmailState extends State<VerifyEmail> {

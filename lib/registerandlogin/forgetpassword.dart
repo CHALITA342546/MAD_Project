@@ -2,14 +2,13 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:mutu/registerandlogin/login.dart';
 import 'package:form_field_validator/form_field_validator.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class Forgetpassword extends StatefulWidget {
   const Forgetpassword({Key? key}) : super(key: key);
 
   @override
-  _ForgetpasswordState createState() => _ForgetpasswordState();
+  State<StatefulWidget> createState() => _ForgetpasswordState();
 }
 
 class _ForgetpasswordState extends State<Forgetpassword> {
@@ -36,8 +35,8 @@ class _ForgetpasswordState extends State<Forgetpassword> {
       Fluttertoast.showToast(
           msg: e.message!,
           gravity: ToastGravity.CENTER,
-          backgroundColor: Color(0xFFFAD6A5),
-          textColor: Color(0xFF344D67));
+          backgroundColor: const Color(0xFFFAD6A5),
+          textColor: const Color(0xFF344D67));
     }
   }
 
@@ -60,7 +59,7 @@ class _ForgetpasswordState extends State<Forgetpassword> {
                       .headlineSmall!
                       .copyWith(fontSize: 15),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 TextFormField(
@@ -70,12 +69,12 @@ class _ForgetpasswordState extends State<Forgetpassword> {
                     RequiredValidator(errorText: 'Plase enter email address')
                   ]),
                   controller: ip,
-                  decoration: InputDecoration(labelText: 'Email').applyDefaults(
+                  decoration: const InputDecoration(labelText: 'Email').applyDefaults(
                       Theme.of(context).inputDecorationTheme.copyWith(
                           labelStyle:
                               Theme.of(context).textTheme.headlineSmall)),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 GestureDetector(
@@ -85,9 +84,9 @@ class _ForgetpasswordState extends State<Forgetpassword> {
                       }
                     },
                     child: Container(
-                        padding: EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
-                            color: Color(0xFFFAD6A5),
+                            color: const Color(0xFFFAD6A5),
                             borderRadius: BorderRadius.circular(10)),
                         child: Text(
                           'Reset Password',
@@ -96,16 +95,16 @@ class _ForgetpasswordState extends State<Forgetpassword> {
                               .headlineSmall!
                               .copyWith(
                                   fontSize: 15,
-                                  color: Color(0xFF344D67),
+                                  color: const Color(0xFF344D67),
                                   fontWeight: FontWeight.bold),
                         ))),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 GestureDetector(
                     onTap: () {
                       Navigator.pushReplacement(context,
-                          MaterialPageRoute(builder: (context) => Login()));
+                          MaterialPageRoute(builder: (context) => const Login()));
                     },
                     child: Text('Change your mind?',
                         style: Theme.of(context)

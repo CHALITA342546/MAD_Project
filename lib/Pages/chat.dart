@@ -4,7 +4,7 @@ class Chat extends StatefulWidget {
   const Chat({Key? key}) : super(key: key);
 
   @override
-  _ChatState createState() => _ChatState();
+  State<Chat> createState() => _ChatState();
 }
 
 class _ChatState extends State<Chat> {
